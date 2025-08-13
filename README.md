@@ -10,7 +10,7 @@ end)
 _G.WhiteListed = true
 if _G.WhiteListed then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("IREN HUB | MADE BY IRENKISS", "DarkTheme", colors)
+local Window = Library.CreateLib("LOVE HUB | MADE BY QUANGDZ", "DarkTheme", colors)
 
 local Tab = Window:NewTab("Underrated Farm")
 local Tab2 = Window:NewTab("Teleport/Server")
@@ -38,6 +38,7 @@ local FFarmingSection2 = Tab5:NewSection("Quake Fruit")
 local FFarmingSection3 = Tab5:NewSection("Mob Bring")
 local KPSection = Tab3:NewSection("Players")
 local KPSection2 = Tab3:NewSection("Quake Fruit")
+local KPSection4 = Tab3:NewSection("Hobby Fruit")
 local KPSection3 = Tab3:NewSection("Light Fruit")
 local MiscSection = Tab9:NewSection("Random Stuff")
 local WeaponSection1 = Tab4:NewSection("Yoru")
@@ -370,6 +371,24 @@ while _G.AutoQuake do
     end
 else
     _G.AutoQuake = false
+end
+end)
+
+KPSection4:NewToggle("Hobby camp" , "Kills Player", function(state)
+if state then
+local vp = x.VTCebvc
+while _G.AutoHobby do
+    wait(0.001)
+    pcall(function()
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+        if v.Name == Choose2 then
+        game:GetService("Players").LocalPlayer.Character.Powers.Hobby.RemoteEvent:FireServer(vp,"HobbyPower2", "StopCharging",workspace.IslandCaver.Stones.Stone,v.HumanoidRootPart.CFrame,100,Vector3.new(-290.4129333496094, 266.8401794433594, -103.8988037109375))
+        end
+    end
+    end)
+    end
+else
+    _G.AutoHobby = false
 end
 end)
 ----------------------------------- FruitFarming
