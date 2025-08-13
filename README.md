@@ -1696,6 +1696,10 @@ SettingsSection:NewKeybind("Toggle Ui", "Toggles the ui on and off when key is p
 Library:ToggleUI()
 end)
 
+Section:NewKeybind("Toggle UI", "on/off UI", Enum.KeyCode.RightControl, function()
+    Library:ToggleUI()
+end)
+
 local colors = {
 SchemeColor = Color3.fromRGB(0,255,255),
 Background = Color3.fromRGB(0, 0, 0),
@@ -1709,4 +1713,4 @@ ColorSection:NewColorPicker(theme, "Change your "..theme, color, function(color3
 Library:ChangeColor(theme, color3)
 end)
 end
-end   
+end
