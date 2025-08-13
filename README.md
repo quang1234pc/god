@@ -1696,7 +1696,7 @@ SettingsSection:NewKeybind("Toggle Ui", "Toggles the ui on and off when key is p
 Library:ToggleUI()
 end)
 
-Section:NewKeybind("Toggle UI", "on/off UI", Enum.KeyCode.p, function()
+Section:NewKeybind("Toggle UI", "on/off UI", Enum.KeyCode.P, function()
     Library:ToggleUI()
 end)
 
